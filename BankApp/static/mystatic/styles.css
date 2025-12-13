@@ -1,0 +1,245 @@
+body{
+    background-image: url(../images/bg4.png);
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    height: 100vh;             /* Full screen height */
+    margin: 0;
+}
+.logo1{
+    width: 100px;
+    height: 100px;
+}
+.headname{
+    text-align: center;
+    justify-content: center;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    top: 0;                    /* move to top */
+    left: 10%;
+    transform: translateX(-10%);
+    
+}
+.full {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* horizontal center */  
+}
+.hyperlinks{
+    background-color: rgba(8, 207, 204, 0.899);
+    display: flex;
+    gap: 40px;
+    text-decoration: none;
+    font-size: x-large;
+    width: 100%;
+    justify-content: center;
+}
+.a1{
+    text-decoration: none;
+    color: Red;
+}
+.a1:hover{
+    color: green;
+}
+.fetch {
+    text-align: center;   /* or use flexbox as above */
+    margin-top: 15px;
+}
+.matter{
+    font-size: xx-large;
+}
+.content{
+    margin: 20px;
+}
+.aboutmatter{
+    font-size: 22px;
+}
+.contact{
+    text-align: center;
+    border: 2px solid black;    /* border added */
+    width: fit-content;         /* keeps same size as content — does NOT stretch */
+    margin: 0 auto;             /* keeps it centered in the same position */
+    padding: 12px 25px;         /* space inside border */
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px;
+}
+.createb{
+    background-color: rgb(112, 247, 186);
+    padding: 5px;
+    font-weight: bold;
+}
+.clearb{
+  background-color: rgb(115, 235, 254);
+    padding: 5px;
+    font-weight: bold;  
+}
+.createbutton{
+    text-align: center;
+}
+.circle-box {
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 50%;      /* perfect circle */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;     /* center content */
+    gap: 10px;               /* space between items */
+    margin: auto;            /* center in page */
+    margin-top: 50px;
+    box-shadow: 3px 3px 3px;
+}
+
+.circle-box button {
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+/* ===============================
+   MOBILE RESPONSIVE DESIGN
+   =============================== */
+@media screen and (max-width: 768px) {
+
+    body {
+        background-size: cover;
+        height: auto;
+    }
+
+    .logo1 {
+        width: 70px;
+        height: 70px;
+    }
+
+    .header {
+        flex-direction: column;
+        left: 0;
+        transform: none;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .headname h2 {
+        font-size: 18px;
+    }
+
+    .hyperlinks {
+        flex-direction: column;
+        gap: 12px;
+        font-size: large;
+        padding: 10px 0;
+    }
+
+    .content {
+        margin: 10px;
+        text-align: center;
+    }
+
+    .matter {
+        font-size: large;
+    }
+
+    .aboutmatter {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .contact {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .circle-box {
+        width: 220px;
+        height: 220px;
+        margin-top: 30px;
+    }
+
+    .circle-box h1 {
+        font-size: 28px;
+    }
+
+    .circle-box button {
+        padding: 6px 16px;
+        font-size: 14px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    input, select {
+        width: 95%;
+        font-size: 14px;
+    }
+
+    .createb,
+    .clearb {
+        width: 80%;
+        margin: 8px auto;
+        display: block;
+    }
+}
+/* ===============================
+   SMALL MOBILE SCREENS (≤ 480px)
+   =============================== */
+@media screen and (max-width: 480px) {
+
+    .logo1 {
+        width: 60px;
+        height: 60px;
+    }
+
+    .headname h2 {
+        font-size: 16px;
+    }
+
+    .hyperlinks {
+        gap: 8px;
+        font-size: medium;
+        padding: 8px 0;
+    }
+
+    .content h2 {
+        font-size: 16px;
+    }
+
+    .matter {
+        font-size: medium;
+    }
+
+    .aboutmatter {
+        font-size: 14px;
+    }
+
+    .circle-box {
+        width: 200px;
+        height: 200px;
+        margin-top: 20px;
+    }
+
+    .circle-box h1 {
+        font-size: 24px;
+    }
+
+    .circle-box button {
+        padding: 5px 14px;
+        font-size: 13px;
+    }
+
+    input, select {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .createb,
+    .clearb {
+        width: 90%;
+        font-size: 14px;
+    }
+}
+

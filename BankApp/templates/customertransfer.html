@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'mystatic/styles.css' %}?v=8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Transfer</title>
+</head>
+<body>
+    <div class="full">
+        <div class="header">
+            <div>
+                <img class="logo1" src="{% static 'images/banklogo.png' %}" alt="image">
+            </div>
+            <div class="headname">
+                <h2 style="color: darkred;">Lion Bank of India</h2>
+            </div>
+        </div>
+        <div class="hyperlinks">
+            <a class="a1" href="{% url 'customerhomePagev' %}"><i class="fa fa-home"></i> Home</a>
+            <a class="a1" href="{% url 'customerbalv' %}"><i class="fa fa-wallet"></i> Balance</a>
+            <a class="a1" href="{% url 'customerdepositv' %}"><i class="fa-solid fa-circle-arrow-down"></i> Deposit</a>
+            <a class="a1" href="{% url 'customerwithdrawv' %}"><i class="fa-solid fa-circle-arrow-up"></i> Withdraw</a>
+            <a class="a1" href="{% url 'customertransferv' %}"><i class="fa-solid fa-arrows-rotate"></i> Transfer</a>
+            <a class="a1" href="{% url 'customerclosev' %}"><i class="fa fa-user-slash"></i> Close A/C</a>
+            <a class="a1" href="{% url 'loginv' %}"><i class="fa fa-sign-out"></i> Log Out</a>
+        </div>
+        <div clas="content">
+            <h2 style="color: brown;">Account Holder Name : {{name}}</h2>
+            <h2 style="color: brown;">Account Number : {{acc}}</h2>
+        </div>
+        <div>
+            <form method="POST">
+                {% csrf_token %}
+                <table cellpadding="10px">
+                    {{form.as_table}}
+                </table>
+                <br>
+                <div style="text-align: center;">
+                    <button class="createb" type="submit">Transfer</button>
+                </div>
+            </form>
+            {% for msg in messages %}
+            {% if messages %}
+            <h3 style="color: red;">{{msg}}</h3>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

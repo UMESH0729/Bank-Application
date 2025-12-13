@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'mystatic/styles.css' %}?v=8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Home</title>
+</head>
+<body>
+    <div class="full">
+        <div class="header">
+            <div>
+                <img class="logo1" src="{% static 'images/banklogo.png' %}" alt="image">
+            </div>
+            <div class="headname">
+                <h2 style="color: darkred;">Lion Bank of India</h2>
+            </div>
+        </div>
+        <div class="hyperlinks">
+            <a class="a1" href="{% url 'homev' %}"><i class="fa fa-home"></i> Home</a>
+            <a class="a1" href="{% url 'newaccv' %}"><i class="fa-solid fa-user-plus"></i> New Account</a>
+            <a class="a1" href="{% url 'balancev' %}"><i class="fa fa-wallet"></i> Balance</a>
+            <a class="a1" href="{% url 'depositv' %}"><i class="fa-solid fa-circle-arrow-down"></i> Deposit</a>
+            <a class="a1" href="{% url 'withdrawv' %}"><i class="fa-solid fa-circle-arrow-up"></i> Withdraw</a>
+            <a class="a1" href="{% url 'transferv' %}"><i class="fa-solid fa-arrows-rotate"></i> Transfer</a>
+            <a class="a1" href="{% url 'managev' %}"><i class="fa-solid fa-user"></i> Manage A/C</a>
+            <a class="a1" href="{% url 'aboutv' %}"><i class="fas fa-info-circle"></i> About US</a>
+            <a class="a1" href="{% url 'loginv' %}"><i class="fa fa-sign-out"></i> Log Out</a>
+        </div>
+        <div clas="content">
+            <h1>Welcome to Lion Bank of India</h1>
+            <div class="matter">
+                <p>
+                At Lion Bank of India, we believe banking should be simple, secure and accessible for everyone.
+                Our digital platform allows you to manage your money anytime, anywhere — with complete confidence.
+                </p>
+                <h2>Our Services</h2>
+                <ul>
+                    <li>💰 Account Opening</li>
+                    <li>🏦 Deposit Facility</li>
+                    <li>🏦 Withdraw Facility</li>
+                    <li>🔁 Fund Transfer Between Accounts</li>
+                </ul>
+                <p>
+    Whether you are a student, professional, business owner, or senior citizen — Lion Bank offers
+    the right financial tools to support your goals.
+</p>
+
+<h3 style="color:green;">Your Trust = = Our Responsibility.</h3>
+<p>
+    Start your digital banking journey today and experience seamless banking at your fingertips.
+</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'mystatic/styles.css' %}?v=8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Withdraw</title>
+</head>
+<body>
+    <div class="full">
+        <div class="header">
+            <div>
+                <img class="logo1" src="{% static 'images/banklogo.png' %}" alt="image">
+            </div>
+            <div class="headname">
+                <h2 style="color: darkred;">Lion Bank of India</h2>
+            </div>
+        </div>
+        <div class="hyperlinks">
+            <a class="a1" href="{% url 'homev' %}"><i class="fa fa-home"></i> Home</a>
+            <a class="a1" href="{% url 'newaccv' %}"><i class="fa-solid fa-user-plus"></i> New Account</a>
+            <a class="a1" href="{% url 'balancev' %}"><i class="fa fa-wallet"></i> Balance</a>
+            <a class="a1" href="{% url 'depositv' %}"><i class="fa-solid fa-circle-arrow-down"></i> Deposit</a>
+            <a class="a1" href="{% url 'withdrawv' %}"><i class="fa-solid fa-circle-arrow-up"></i> Withdraw</a>
+            <a class="a1" href="{% url 'transferv' %}"><i class="fa-solid fa-arrows-rotate"></i> Transfer</a>
+            <a class="a1" href="{% url 'managev' %}"><i class="fa-solid fa-user"></i> Manage A/C</a>
+            <a class="a1" href="{% url 'aboutv' %}"><i class="fas fa-info-circle"></i> About US</a>
+            <a class="a1" href="{% url 'loginv' %}"><i class="fa fa-sign-out"></i> Log Out</a>
+        </div>
+        <div>
+            <h1 style="color: green;text-shadow: 0px 0px 2px;">Withdraw Money</h1>
+            <div>
+                <form method="POST">
+                {% csrf_token %}
+                <table cellpadding="5px">
+                    {{form.as_table}}
+                </table>
+                <div style="text-align: center;">
+                    <input class="createb" type="submit" value="Withdraw">
+                </div>
+            </form>
+            {% for msg in messages %}
+            {% if messages %}
+            <h2 style="color: red;">{{msg}}</h2>
+            {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

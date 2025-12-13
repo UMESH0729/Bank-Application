@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'mystatic/styles.css' %}?v=7">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Sign In</title>
+</head>
+<body>
+    <div class="full">
+        <div class="header">
+            <div>
+                <img class="logo1" src="{% static 'images/banklogo.png' %}" alt="image">
+            </div>
+            <div class="headname">
+                <h2 style="color: darkred;">Lion Bank of India</h2>
+            </div>
+        </div>
+        <div>
+            <h1>Employee Login</h1>
+        </div>
+        <div>
+            <form method="POST">
+                {% csrf_token %}
+                <table>
+                    {{form.as_table}}
+                </table><br>
+                <div class="createbutton">
+                    <button class="createb" type="submit">Login</button>
+                    <button class="clearb"><a style="text-decoration: none;color: black;" href="{% url 'loginv' %}">Return</a></button>
+                </div>
+            </form>
+            <p>New User... <a href="{% url 'empregisterv' %}">Register</a></p>
+            {% for msg in messages %}
+            {% if messages %}
+            <h2>{{msg}}</h2>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

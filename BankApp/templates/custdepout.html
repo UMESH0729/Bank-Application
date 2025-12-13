@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'mystatic/styles.css' %}?v=8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Deposit</title>
+</head>
+<body>
+    <div class="full">
+        <div class="header">
+            <div>
+                <img class="logo1" src="{% static 'images/banklogo.png' %}" alt="image">
+            </div>
+            <div class="headname">
+                <h2 style="color: darkred;">Lion Bank of India</h2>
+            </div>
+        </div>
+        <div class="hyperlinks">
+            <a class="a1" href="{% url 'customerhomePagev' %}"><i class="fa fa-home"></i> Home</a>
+            <a class="a1" href="{% url 'customerbalv' %}"><i class="fa fa-wallet"></i> Balance</a>
+            <a class="a1" href="{% url 'customerdepositv' %}"><i class="fa-solid fa-circle-arrow-down"></i> Deposit</a>
+            <a class="a1" href="{% url 'customerwithdrawv' %}"><i class="fa-solid fa-circle-arrow-up"></i> Withdraw</a>
+            <a class="a1" href="{% url 'customertransferv' %}"><i class="fa-solid fa-arrows-rotate"></i> Transfer</a>
+            <a class="a1" href="{% url 'customerclosev' %}"><i class="fa fa-user-slash"></i> Close A/C</a>
+            <a class="a1" href="{% url 'loginv' %}"><i class="fa fa-sign-out"></i> Log Out</a>
+        </div>
+        <div clas="content">
+            <h1 style="color: brown;">Account Holder Name : {{name}}</h1>
+            <h1 style="color: brown;">Account Number : {{acc}}</h1>
+        </div>
+        <br><br>
+        <div>
+            <h2 style="color: green;">Existing Account Balance : <i class="fa-solid fa-indian-rupee-sign"></i> {{old_bal}}</h2>
+            <h2 style="color: green;">Deposit Amount : <i class="fa-solid fa-indian-rupee-sign"></i> {{amount}}</h2>
+           <h2 style="color: green;">Current Account Balance : <i class="fa-solid fa-indian-rupee-sign"></i> {{new_bal}}</h2>
+        </div>
+    </div>
+</body>
+</html>
