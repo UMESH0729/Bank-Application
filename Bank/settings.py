@@ -28,7 +28,8 @@ DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-ALLOWED_HOSTS = ['bank-application-2-t554.onrender.com']
+ALLOWED_HOSTS = ['bank-application-9.onrender.com']
+
 
 
 # Application definition
