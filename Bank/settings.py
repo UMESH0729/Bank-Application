@@ -34,7 +34,7 @@ DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 # SECURITY WARNING: don't run with debug turned on in production!
 
 ALLOWED_HOSTS = [
-    'bank-application-16.onrender.com',
+    'bank-application-17.onrender.com',
     '.onrender.com',   # IMPORTANT (allows subdomains)
     'localhost',
     '127.0.0.1'
