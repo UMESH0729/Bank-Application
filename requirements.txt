@@ -4,6 +4,7 @@ anyio==4.12.0
 asgiref==3.10.0
 click==8.3.1
 colorama==0.4.6
+dj-database-url==3.0.1
 Django==5.2.8
 fastapi==0.124.0
 greenlet==3.3.0
@@ -12,9 +13,13 @@ h11==0.16.0
 idna==3.11
 mysqlclient==2.2.7
 packaging==25.0
+psycopg==3.3.2
+psycopg-binary==3.3.2
+psycopg2-binary==2.9.11
 pydantic==2.12.5
 pydantic_core==2.41.5
 PyMySQL==1.1.2
+python-decouple==3.8
 python-dotenv==1.2.1
 SQLAlchemy==2.0.45
 sqlparse==0.5.3
